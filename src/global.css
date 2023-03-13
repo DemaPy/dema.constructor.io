@@ -1,0 +1,78 @@
+.my__btn {
+    padding: 7px 15px;
+
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 3px solid var(--violet);
+
+    cursor: pointer;
+    font-family: "Roboto";
+    color: var(--fontColor);
+    background-color: transparent;
+}
+
+.my__btn__small {
+    padding: 4px 8px;
+    margin: 4px;
+    height: fit-content;
+
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid var(--violet);
+    font-weight: normal;
+
+    cursor: pointer;
+    font-family: "Roboto";
+    color: var(--fontColor);
+    background-color: transparent;
+}
+
+.my__select {
+    padding: 7px 15px;
+    margin: 8px;
+
+    font-size: 20px;
+    border-radius: 5px;
+    border: 3px solid var(--violet);
+
+
+    cursor: pointer;
+    font-family: "Roboto";
+    color: var(--fontColor);
+    background-color: transparent;
+}
+
+.my__select__small {
+    padding: 4px 8px;
+    margin: 4px;
+
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid var(--violet);
+    font-weight: normal;
+
+    cursor: pointer;
+    font-family: "Roboto";
+    color: var(--fontColor);
+    background-color: transparent;
+}
+
+
+.my__select__small option {
+    color: var(--fontColor);
+    background-color: var(--violet);
+}
+
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.section {
+    background: var(--appBgColor);
+    border-radius: 5px;
+    padding: 15px;
+}

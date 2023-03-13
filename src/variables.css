@@ -1,0 +1,22 @@
+:root {
+  --fontColor: rgb(252, 252, 252);
+  --violet: #8167a9;
+  --appBgColor: rgb(51, 51, 51);
+  --sectionBgColor: rgb(36, 36, 36);
+  --sectionBgColorSecondary: rgba(80, 80, 80, 0.501);
+  --inputColor: rgb(228, 228, 228);
+  --fz20px: 20px;
+  --bg-main-color: #1f2029;
+  --toned-down-white: #f1f1f1;
+  --highlight-main: #8167a9;
+}
+
+.mtAuto {
+  margin-top: auto!important;
+}
+
+.none {
+  opacity: 0!important;
+  z-index: -10!important;
+  transform: translateY(-20px)!important;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./src/img/logo_beliani.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
+    <link rel="stylesheet" href="./src/reset.css">
+    <link rel="stylesheet" href="./src/variables.css">
+    <link rel="stylesheet" href="./src/header.css">
+    <link rel="stylesheet" href="./src/global.css">
+    <link rel="stylesheet" href="./src/modal.css">
+    <link rel="stylesheet" href="./src/sidebarBtns.css">
+    <link rel="stylesheet" href="./src/countriesBtns.css">
+    <link rel="stylesheet" href="./src/configureData.css">
+    <link rel="stylesheet" href="./src/main.css">
+    <link rel="stylesheet" href="./src/sidebar.css">
+    <link rel="stylesheet" href="./src/configure.css">
+    <link rel="stylesheet" href="./src/createTemplate.css">
+    <link rel="stylesheet" href="./src/campaigns.css">
+    <link rel="stylesheet" href="./components/changeTheme/changeTheme.css">
+    <link rel="stylesheet" href="./Toast/toast.css">
+    <link rel="stylesheet" href="./Section/section.css">
+    <title>HTML Constructor</title>
+</head>
+<body>
+    <div class="container">
+        <header class="constructorHeader section">
+            <nav class="constructorNav">
+                <h2 class="sidebar__title">HTML Constructor</h2>
+                <aside>
+                    <ul>
+                        <li id="addCampaign" class="my__btn__small">
+                            Add campaign
+                        </li>
+                        <li id="newCampaign" class="my__btn__small">
+                            New campaign
+                        </li>
+                        <li id="configure" class="my__btn__small">
+                            Configure
+                        </li>
+                        <select id="select" class="my__select__small">
+                            <option value="newsletter">Newsletter</option>
+                            <option value="landing">Landing page</option>
+                        </select>
+                        <label class="switch">
+                            <input id="changeTheme" type="checkbox" id="toggleBtn">
+                            <span class="slider round"></span>
+                        </label>
+                    </ul>
+                </aside>
+            </nav>
+        </header>
+    </div>
+
+    <div class="configure none">
+        <div class="configureOption">
+            <h4>Separator</h4>
+            <div class="configureOption__select">
+                <select id="selectSeparator" class="my__select__small">
+                    <option selected disabled>Select</option>
+                    <option value="space">Space</option>
+                    <option value="tab">Tab</option>
+                    <option value="newLine">New line</option>
+                </select>
+                <div id="selectedSeparator" class="selectedOption"></div>
+            </div>
+        </div>
+        <div class="configureOption">
+            <h4>Country ordering</h4>
+            <div class="configureOption__select">
+                <select id="selectCountiesOrdering" class="setCountryOrdering" multiple>
+                    <option value="CHDE">CHDE</option>
+                    <option value="CHFR">CHFR</option>
+                    <option value="DE">DE</option>
+                    <option value="UK">UK</option>
+                    <option value="FR">FR</option>
+                    <option value="AT">AT</option>
+                    <option value="ES">ES</option>
+                    <option value="PL">PL</option>
+                    <option value="NL">NL</option>
+                    <option value="IT">IT</option>
+                    <option value="PT">PT</option>
+                    <option value="SE">SE</option>
+                    <option value="HU">HU</option>
+                    <option value="DK">DK</option>
+                    <option value="CZ">CZ</option>
+                    <option value="FI">FI</option>
+                    <option value="NO">NO</option>
+                    <option value="SK">SK</option>
+                </select>
+                <div id="selectedCountries" class="selectedOption"></div>
+            </div>
+        </div>
+        <div class="configureOption">
+            <div class="panel">
+                <div class="panelOption">
+                    <label for="addHeader">Add header</label>
+                    <input type="checkbox" id="addHeader" class="option"> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section__modal hide" id="section__modal"></section>
+
+    <div class="container">
+        <div class="main__wrapper">
+            <div class="sidebar">
+                <div id="countryBox" class="section"></div>
+                <div class="sidebarBtns section">
+                    <button id="copyTemplate" class="my__btn">Copy newsletter</button>
+                    <button id="allCampaigns" type="button" class="my__btn">All campaigns</button>
+                    <button id="generate" type="button" class="my__btn">Generate template</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="campaign__info section">
+                    <select id="showTemplates" class="my__select__small">
+                        <option selected disabled>Select</option>
+                    </select>
+                    <h3 >Campaign: <a name="name" href="#" target="_blank" class="info__data">name</a></h3>
+                    <div class="info__box">
+                        <span>Landing page:</span>
+                        <span name="landing" class="info__data">landing</span>
+                    </div>
+                    <div class="info__box">
+                        <span>Banner 1:</span>
+                        <span name="firstBanner" class="info__data">firstBanner</span>
+                    </div>
+                    <div class="info__box">
+                        <span>Banner 2:</span>
+                        <span name="secondBanner" class="info__data">secondBanner</span>
+                    </div>
+                    <div class="info__box">
+                        <span>Campaign id:</span>
+                        <a target="_blank" href="" id='campaignId' class="info__data">id</a>
+                    </div>
+                </div>
+            
+                <main class="main__section section" id="main">
+                    <div id="campaigns" class="none"></div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Toast/toast.js"></script>
+    <script src="./Section/section.js"></script>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="utils/cashe.js"></script>
+</body>
+</html>
+

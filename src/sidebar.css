@@ -1,0 +1,32 @@
+.sidebar {
+  width: 30%;
+  height: 100%;
+
+  padding-top: 0px;
+  color: var(--fontColor);
+}
+
+
+.sidebar .sidebar__option {
+  background-color: var(--appBgColor);
+}
+
+@media screen and (max-width: 1600px) {
+  .main__wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sidebar {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .sidebar {
+      flex-direction: column;
+  }
+}

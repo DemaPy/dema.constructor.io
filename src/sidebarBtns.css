@@ -1,0 +1,41 @@
+.sidebarBtns {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    gap: 16px;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .sidebarBtns {
+        width: 50%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 8px;
+    }
+
+    .sidebarBtns .my__btn {
+        width: 49%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .sidebarBtns {
+        padding: 10px;
+    }
+
+    .sidebarBtns .my__btn {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .sidebarBtns {
+        width: 100%;
+        flex-direction: row;
+        font-size: .9rem;
+    }
+  }
